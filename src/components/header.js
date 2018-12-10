@@ -1,17 +1,6 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
-// import { library, icon } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { twitter-square } from '@fortawesome/free-solid-svg-icons';
-// import { linkedin } from '@fortawesome/free-solid-svg-icons';
-// import { github } from '@fortawesome/free-solid-svg-icons';
-
-// library.add(twitter);
-// library.add(linkedin);
-// library.add(github);
-
-// const twitter = icon({ prefix: 'fab', iconName: 'twitter-square' });
 
 const styles = {
   
@@ -26,18 +15,14 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <div className="left menu">
-      <i class="github square icon"></i>
-      <i class="linkedin icon"></i>
-      <i class="twitter square icon"></i>
+      <i class="github square icon big"></i>
+      <i class="linkedin icon big"></i>
+      <i class="twitter square icon big"></i>
     </div>
     <div
       className="right menu"
       style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-        display: 'flex',
-        justifyContent: 'space-around',
+        
       }}
     >
       <p>
