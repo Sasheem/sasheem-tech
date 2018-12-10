@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Sasheem Personal Website',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
