@@ -3,13 +3,17 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
+// import ProfileImage from '../components/profile-image';
 import 'semantic-ui-css/semantic.min.css'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <div className="segment">
+      <h1>Hi I'm Sasheem</h1>
+      <p>Mobile App and Web Developer</p>
+      <p>I build using React and React Native</p>
+    </div>
+    
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <Image />
     </div>
