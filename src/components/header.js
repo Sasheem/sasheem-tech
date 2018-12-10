@@ -13,19 +13,31 @@ import React from 'react'
 
 // const twitter = icon({ prefix: 'fab', iconName: 'twitter-square' });
 
+const styles = {
+  
+}
+
 const Header = ({ siteTitle }) => (
   <div
+    className="ui secondary menu"
     style={{
       background: 'rebeccapurple',
       marginBottom: '1.45rem',
     }}
   >
+    <div className="left menu">
+      <i class="github square icon"></i>
+      <i class="linkedin icon"></i>
+      <i class="twitter square icon"></i>
+    </div>
     <div
-      className="ui secondary menu"
+      className="right menu"
       style={{
         margin: '0 auto',
         maxWidth: 960,
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
+        justifyContent: 'space-around',
       }}
     >
       <p>
