@@ -2,54 +2,82 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components';
+import { TwitterSquare } from 'styled-icons/fa-brands/TwitterSquare';
+import { Linkedin } from 'styled-icons/fa-brands/Linkedin';
+import { GithubSquare } from 'styled-icons/fa-brands/GithubSquare';
 
 const HeaderLink = styled(Link)`
   color: black;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1em;
+  margin-right: 4em;
 `;
+const TwitterLink = styled(TwitterSquare)``;
+const LinkedinLink = styled(Linkedin)``;
+const GithubLink = styled(GithubSquare)``;
+
+const styles = {
+  socialStyles: {
+    color: 'black',
+    marginRight: '0.1em',
+  },
+}
 
 const Header = ({ siteTitle }) => (
   <div
-    className="ui secondary menu"
     style={{
-      // background: 'rebeccapurple',
       marginBottom: '1.45rem',
+      display: 'flex',
     }}
   >
-    <a class="item" href="https://www.github.com/Sasheem">
-      <i class="github square icon big link"></i>
-    </a>
-    <a class="item" href="https://www.linkedin.com/in/sasheem/">
-      <i class="linkedin icon big link"></i>
-    </a>
-    <a class="item" href="https://twitter.com/sasheemdev">
-      <i class="twitter square icon big link"></i>
-    </a>
-    <div className="right menu" style={{ marginTop: '.45rem', marginRight: '5rem' }}>
+    <div 
+      id="leftMenu" 
+      style={{  
+        display: 'flex', 
+        paddingTop: '0.9em',
+        flex: '2',
+        marginLeft: '1em', 
+      }}>
+      <a class="item" href="https://www.github.com/Sasheem">
+        <GithubLink title="Github Link" size="40" style={styles.socialStyles} />
+      </a>
+      <a class="item" href="https://www.linkedin.com/in/sasheem/">
+        <LinkedinLink title="Linkedin Link" size="40" style={styles.socialStyles} />
+      </a>
+      <a class="item" href="https://twitter.com/sasheemdev">
+        <TwitterLink title="Twitter Link" size="40" style={styles.socialStyles} />
+      </a>
+    </div>
+    
+    <div 
+      id="rightMenu" 
+      style={{ 
+        display: 'flex', 
+        paddingTop: '1.2em',
+        flex: '2',
+        justifyContent: 'flex-end',
+        marginRight: '1em',
+      }}
+    >
+      <p>
+        <HeaderLink to="/">
+          Home
+        </HeaderLink>
+      </p>
       <p>
         <HeaderLink to="/">
           About
         </HeaderLink>
-        {/* <Link className="item" to="/" style={styles.links}>
-          About
-        </Link> */}
       </p>
       <p>
         <HeaderLink to="/">
           Projects
         </HeaderLink>
-        {/* <Link className="item" to="/" style={styles.links}>
-          Projects
-        </Link> */}
       </p>
       <p>
         <HeaderLink to="/">
           Contact
         </HeaderLink>
-        {/* <Link className="item" to="/" style={styles.links}>
-          Contact
-        </Link> */}
       </p>
     </div>
   </div>
@@ -63,4 +91,4 @@ Header.defaultProps = {
   siteTitle: '',
 }
 
-export default Header
+export default Header;
