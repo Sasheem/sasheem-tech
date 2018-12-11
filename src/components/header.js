@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import styled from 'styled-components';
 
 const styles = {
   links: {
@@ -12,6 +13,12 @@ const styles = {
     marginRight: '-2.5rem',
   }
 }
+
+const HeaderLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+`;
 
 const Header = ({ siteTitle }) => (
   <div
@@ -32,19 +39,28 @@ const Header = ({ siteTitle }) => (
     </a>
     <div className="right menu" style={{ marginTop: '.45rem', marginRight: '5rem' }}>
       <p>
-        <Link className="item" to="/" style={styles.links}>
+        <HeaderLink to="/">
           About
-        </Link>
+        </HeaderLink>
+        {/* <Link className="item" to="/" style={styles.links}>
+          About
+        </Link> */}
       </p>
       <p>
-        <Link className="item" to="/" style={styles.links}>
+        <HeaderLink to="/">
           Projects
-        </Link>
+        </HeaderLink>
+        {/* <Link className="item" to="/" style={styles.links}>
+          Projects
+        </Link> */}
       </p>
       <p>
-        <Link className="item" to="/" style={styles.links}>
+        <HeaderLink to="/">
           Contact
-        </Link>
+        </HeaderLink>
+        {/* <Link className="item" to="/" style={styles.links}>
+          Contact
+        </Link> */}
       </p>
     </div>
   </div>
