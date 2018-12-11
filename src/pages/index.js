@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Image from '../components/image'
 // import ProfileImage from '../components/profile-image';
-import 'semantic-ui-css/semantic.min.css'
 
 const IndexPage = () => (
   <Layout>
