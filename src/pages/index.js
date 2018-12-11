@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components';
 
 import Layout from '../components/layout'
 import Image from '../components/image'
 // import ProfileImage from '../components/profile-image';
+
 
 const IndexPage = () => (
   <Layout>

@@ -3,17 +3,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components';
 
-const styles = {
-  links: {
-    color: 'black',
-    textDecoration: 'none',
-    fontSize: '1.3rem',
-  },
-  socialLinks: {
-    marginRight: '-2.5rem',
-  }
-}
-
 const HeaderLink = styled(Link)`
   color: black;
   text-decoration: none;
@@ -28,13 +17,13 @@ const Header = ({ siteTitle }) => (
       marginBottom: '1.45rem',
     }}
   >
-    <a class="item" style={styles.socialLinks} href="https://www.github.com/Sasheem">
+    <a class="item" href="https://www.github.com/Sasheem">
       <i class="github square icon big link"></i>
     </a>
-    <a class="item" style={styles.socialLinks} href="https://www.linkedin.com/in/sasheem/">
+    <a class="item" href="https://www.linkedin.com/in/sasheem/">
       <i class="linkedin icon big link"></i>
     </a>
-    <a class="item" style={styles.socialLinks} href="https://twitter.com/sasheemdev">
+    <a class="item" href="https://twitter.com/sasheemdev">
       <i class="twitter square icon big link"></i>
     </a>
     <div className="right menu" style={{ marginTop: '.45rem', marginRight: '5rem' }}>
