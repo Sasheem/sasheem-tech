@@ -30,7 +30,7 @@ const Profile = () => {
                     href="https://www.unhousedhumanity.org/"
                 >
                     Currently developing for Unhoused Humanity
-        </a>
+                </a>
             </div>
             <div
                 style={{
