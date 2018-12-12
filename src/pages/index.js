@@ -20,7 +20,7 @@ const IndexPage = () => (
         <h1>Hi I'm Sasheem</h1>
         <p>Mobile App and Web Developer</p>
         <p style={{ marginBottom: '3em' }}>I build things with React and React Native</p>
-        <Link 
+        <a 
           style={{ 
             fontSize: '1em',
             textDecoration: 'none', 
@@ -29,10 +29,10 @@ const IndexPage = () => (
             padding: '0.3em',
             borderRadius: '0.3em' 
           }}
-          to="https://www.unhousedhumanity.org/"
+          href="https://www.unhousedhumanity.org/"
         >
           Currently developing for Unhoused Humanity
-        </Link>
+        </a>
       </div>
       <div 
         style={{ 
