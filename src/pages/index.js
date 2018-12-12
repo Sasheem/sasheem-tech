@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 
 const ProfileContainer = styled.div`
-  height: 88vh;
+  height: 87vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -20,12 +20,17 @@ const IndexPage = () => (
         <h1>Hi I'm Sasheem</h1>
         <p>Mobile App and Web Developer</p>
         <p>I build things with React and React Native</p>
+        <Link 
+          style={{ textDecoration: 'none', color: 'rgba(0,0,0,0.3)' }}
+          to="https://www.unhousedhumanity.org/"
+        >
+          Currently developing for Unhoused Humanity
+        </Link>
       </div>
       <div style={{ maxWidth: '300px', marginBottom: '1.45rem', width: '300px', marginLeft: '5em' }}>
         <Image />
       </div>
     </ProfileContainer>
-    {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 )
 
