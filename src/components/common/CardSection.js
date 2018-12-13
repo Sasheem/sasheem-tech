@@ -1,24 +1,22 @@
 import React from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+
+const CardSectionStyled = styled.div`
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 0.5em;
+  padding-top: 0.3em;
+`;
 
 const CardSection = (props) => {
   return (
-    <div style={[styles.containerStyle, props.style]}>
+    <CardSectionStyled>
       {props.children}
-    </div>
+    </CardSectionStyled>
   );
-};
-
-const styles = {
-  containerStyle: {
-    borderBottomWidth: 1,
-    padding: 5,
-    backgroundColor: '#fff',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    borderColor: '#ddd',
-    position: 'relative'
-  }
 };
 
 export default CardSection;
