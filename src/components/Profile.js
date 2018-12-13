@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Image from './image';
+import ProjectLink from './ProjectLink';
 
 const ProfileContainer = styled.div`
   height: 87vh;
@@ -18,7 +19,8 @@ const Profile = () => {
                 <h1>Hi I'm Sasheem</h1>
                 <p>Mobile App and Web Developer</p>
                 <p style={{ marginBottom: '3em' }}>I build things with React and React Native</p>
-                <a
+                <ProjectLink destination="https://www.unhousedhumanity.org/">Currently developing for Unhoused Humanity</ProjectLink>
+                {/* <a
                     style={{
                         fontSize: '1em',
                         textDecoration: 'none',
@@ -30,7 +32,7 @@ const Profile = () => {
                     href="https://www.unhousedhumanity.org/"
                 >
                     Currently developing for Unhoused Humanity
-                </a>
+                </a> */}
             </div>
             <div
                 style={{

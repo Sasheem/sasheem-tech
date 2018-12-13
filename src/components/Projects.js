@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Card from './common/Card';
 import CardSection from './common/CardSection';
+import ProjectLink from './ProjectLink';
 
 // need to import a project card component to hold each project
 // this card would include a name, small description, image
@@ -93,6 +94,7 @@ const Projects = () => {
                     </CardSection>
                 </Card>
             </ProjectSection>
+            <ProjectLink href="/">More Projects</ProjectLink>
         </div>
     );
 };
