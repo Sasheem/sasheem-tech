@@ -52,7 +52,7 @@ const Projects = () => {
             <h2>Previous Projects</h2>
             <ProjectSection>
                 <Card>
-                    <ProjectImage />
+                    <ProjectImage imageName="project-1.png" style={{ flex: '4' }}/>
                     <CardSection>
                         <h4>Project 1</h4>
                         <ProjectDescription>Project 1 Description</ProjectDescription>
@@ -60,7 +60,7 @@ const Projects = () => {
                     </CardSection>
                 </Card>
                 <Card>
-                    <FutureProjectImage />
+                    <ProjectImage style={{ flex: '4' }} />
                     <CardSection>
                         <h4>Project 2</h4>
                         <ProjectDescription>Project 2 description</ProjectDescription>

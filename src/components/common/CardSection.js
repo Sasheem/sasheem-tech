@@ -9,6 +9,7 @@ const CardSectionStyled = styled.div`
   align-items: flex-start;
   padding-left: 0.5em;
   padding-top: 0.3em;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
 `;
 
 const CardSection = (props) => {

@@ -2,10 +2,10 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const ProjectImage = () => (
+const ProjectImage = (props) => (
     <StaticQuery 
         query={graphql`
-            query ProjectQuery {
+            query ProjectQuery($imageName: String) {
                 projectImage: file(relativePath: { eq: "project-1.png" }) {
                     childImageSharp {
                         fluid(maxWidth: 200) {
@@ -18,8 +18,7 @@ const ProjectImage = () => (
         render={data => 
             <Img 
                 style={{ 
-                    borderTopLeftRadius: '0.3em',
-                    borderTopRightRadius: '0.3em' 
+                    borderRadius: '0.3em'
                 }} 
                 fluid={data.projectImage.childImageSharp.fluid} 
             />
