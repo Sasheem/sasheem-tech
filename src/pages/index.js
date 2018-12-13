@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components';
 
 import Layout from '../components/layout'
@@ -16,7 +15,7 @@ const PageLessLayout = styled(Layout)`
 const IndexPage = () => (
   <PageLessLayout>
     <Profile />
-    <About />
+    {/* <About /> */}
     <Projects />
     <Contact />
   </PageLessLayout>
