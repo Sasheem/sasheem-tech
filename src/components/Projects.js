@@ -44,6 +44,7 @@ const ProjectSection = styled.div`
     grid-row-gap: 2em;
     padding: 3em;
     height: 80%;
+    margin-bottom: 3em;
 `;
 
 const ProjectDescription = styled.p`
@@ -86,7 +87,7 @@ const Projects = () => (
                 style={{
                     margin: 'auto 0',
                     textAlign: 'center',
-                    height: '100vh',
+                    height: '120vh',
                     paddingTop: '1em',
                 }}
             >
@@ -101,21 +102,36 @@ const Projects = () => (
                         </CardSection>
                     </Card>
                     <Card>
-                        <Img style={{ borderTopLeftRadius: '0.3em', borderTopRightRadius: '0.3em' }} fluid={data.projectTwo.childImageSharp.fluid} />
+                        <Img 
+                        style={{ 
+                            borderTopLeftRadius: '0.3em', 
+                            borderTopRightRadius: '0.3em' 
+                        }} 
+                        fluid={data.projectTwo.childImageSharp.fluid} />
                         <CardSection>
                             <h4>Fan page about No Man's Sky</h4>
                             <ProjectDescription>HTML/CSS/Javascript - Flex</ProjectDescription>
                         </CardSection>
                     </Card>
                     <Card>
-                        <Img style={{ borderTopLeftRadius: '0.3em', borderTopRightRadius: '0.3em' }} fluid={data.projectThree.childImageSharp.fluid} />
+                        <Img 
+                            style={{ 
+                                borderTopLeftRadius: '0.3em', 
+                                borderTopRightRadius: '0.3em' 
+                            }} 
+                            fluid={data.projectThree.childImageSharp.fluid} />
                         <CardSection>
                             <h4>Website for Unhoused Humanity</h4>
                             <ProjectDescription>SquareSpace - Developer Mode - HTML5/CSS3/Javascript</ProjectDescription>
                         </CardSection>
                     </Card>
                     <Card>
-                        <Img style={{ borderRadius: '0.3em', flex: '4' }} fluid={data.projectFour.childImageSharp.fluid} />
+                        <Img 
+                            style={{ 
+                                borderRadius: '0.3em', 
+                                flex: '4' 
+                            }} 
+                            fluid={data.projectFour.childImageSharp.fluid} />
                         <CardSection>
                             <h4>React App: Pictures</h4>
                             <ProjectDescription>React - Javascript - Unsplash API</ProjectDescription>
