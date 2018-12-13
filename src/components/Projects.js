@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Card from './common/Card';
 import CardSection from './common/CardSection';
@@ -23,6 +25,17 @@ import ProjectImage from './ProjectImage';
     the query method for my <StaticQuery />
 */
 
+// fragment to reduce size of query for project images below
+export const fluidImages = graphql`
+    fragment fluidImages on File {
+        childImageSharp {
+            fluid(maxWidth: 200) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+`;
+
 const ProjectSection = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -45,66 +58,88 @@ const FutureProjectImage = styled.div`
     flex: 4;
 `;
 
+const ProjectImg = styled.div`
+    border-radius: 0.3em;
+    flex: 4;
+`;
 
-const Projects = () => {
-    return(
-        <div 
-            style={{ 
-                margin: 'auto 0', 
-                textAlign: 'center',
-                height: '100vh', 
-                paddingTop: '1em',
-            }}
-        >
-            <h2>Previous Projects</h2>
-            <ProjectSection>
-                <Card>
-                    <ProjectImage imageName="project-1.png" style={{ flex: '4' }}/>
-                    <CardSection>
-                        <h4>Project 1</h4>
-                        <ProjectDescription>Project 1 Description</ProjectDescription>
-                        {/* <p style={{ position: 'relative', bottom: '1em' }}>Project 1 Description</p> */}
-                    </CardSection>
-                </Card>
-                <Card>
-                    <ProjectImage style={{ flex: '4' }} />
-                    <CardSection>
-                        <h4>Project 2</h4>
-                        <ProjectDescription>Project 2 description</ProjectDescription>
-                    </CardSection>
-                </Card>
-                <Card>
-                    <FutureProjectImage />
-                    <CardSection>
-                        <h4>Project 3</h4>
-                        <ProjectDescription>Project 3 description</ProjectDescription>
-                    </CardSection>
-                </Card>
-                <Card>
-                    <FutureProjectImage />
-                    <CardSection>
-                        <h4>Project 4</h4>
-                        <ProjectDescription>Project 4 description</ProjectDescription>
-                    </CardSection>
-                </Card>
-                <Card>
-                    <FutureProjectImage />
-                    <CardSection>
-                        <h4>Project 5</h4>
-                        <ProjectDescription>Project 5 description</ProjectDescription>
-                    </CardSection>
-                </Card>
-                <Card>
-                    <FutureProjectImage />
-                    <CardSection>
-                        <h4>Project 6</h4>
-                        <ProjectDescription>Project 6 description</ProjectDescription>
-                    </CardSection>
-                </Card>
-            </ProjectSection>
-            <ProjectLink href="/">More Projects</ProjectLink>
-        </div>
-    );
-};
+const Projects = () => (
+    <StaticQuery
+        query={graphql`
+            query ProjectsQuery {
+                projectOne: file(relativePath: { eq: "project-1.png" }) {
+                    ...fluidImages
+                }
+                projectTwo: file(relativePath: { eq: "project-2.png" }) {
+                    ...fluidImages
+                }
+                projectThree: file(relativePath: { eq: "project-3.png" }) {
+                    ...fluidImages
+                }
+                projectFour: file(relativePath: { eq: "project-4.png" }) {
+                    ...fluidImages
+                }
+            }
+        `}
+        render={data =>
+            <div
+                style={{
+                    margin: 'auto 0',
+                    textAlign: 'center',
+                    height: '100vh',
+                    paddingTop: '1em',
+                }}
+            >
+                <h2>Previous Projects</h2>
+                <ProjectSection>
+                    <Card>
+                        {/* <ProjectImage imageName="project-1.png" style={{ flex: '4' }} /> */}
+                        <Img style={{ borderRadius: '0.3em' }} fluid={data.projectOne.childImageSharp.fluid} />
+                        <CardSection>
+                            <h4>Informative page on homelessness</h4>
+                            <ProjectDescription>HTML/CSS/Javascript - Flex</ProjectDescription>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <Img style={{ borderTopLeftRadius: '0.3em', borderTopRightRadius: '0.3em' }} fluid={data.projectTwo.childImageSharp.fluid} />
+                        <CardSection>
+                            <h4>Fan page about No Man's Sky</h4>
+                            <ProjectDescription>HTML/CSS/Javascript - Flex</ProjectDescription>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <Img style={{ borderTopLeftRadius: '0.3em', borderTopRightRadius: '0.3em' }} fluid={data.projectThree.childImageSharp.fluid} />
+                        <CardSection>
+                            <h4>Website for Unhoused Humanity</h4>
+                            <ProjectDescription>SquareSpace - Developer Mode - HTML5/CSS3/Javascript</ProjectDescription>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <Img style={{ borderRadius: '0.3em', flex: '4' }} fluid={data.projectFour.childImageSharp.fluid} />
+                        <CardSection>
+                            <h4>React App: Pictures</h4>
+                            <ProjectDescription>React - Javascript - Unsplash API</ProjectDescription>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <FutureProjectImage />
+                        <CardSection>
+                            <h4>Project 5</h4>
+                            <ProjectDescription>Project 5 description</ProjectDescription>
+                        </CardSection>
+                    </Card>
+                    <Card>
+                        <FutureProjectImage />
+                        <CardSection>
+                            <h4>Project 6</h4>
+                            <ProjectDescription>Project 6 description</ProjectDescription>
+                        </CardSection>
+                    </Card>
+                </ProjectSection>
+                <ProjectLink href="/">More Projects</ProjectLink>
+            </div>
+        }
+    />
+)
 
 export default Projects;
