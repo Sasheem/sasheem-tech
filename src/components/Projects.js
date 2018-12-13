@@ -14,6 +14,13 @@ import ProjectImage from './ProjectImage';
     then from this Projects component I will add them as props? think about this...
 
     For now I am setting this up without a StaticQuery component. Just to get some layout down.
+
+    ------------------------
+
+    So I am moving the logic out of ProjectImage to here for now b/c I think I need Apollo to pass in a prop
+    to my ProjectImage component w/ the appropriate file name for it to return the corresponding image.
+    I will just query all my images now and display them by referencing the respective alias I create in
+    the query method for my <StaticQuery />
 */
 
 const ProjectSection = styled.div`
