@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Card from './common/Card';
 import CardSection from './common/CardSection';
 import ProjectLink from './ProjectLink';
+import ProjectImage from './ProjectImage';
 
 // need to import a project card component to hold each project
 // this card would include a name, small description, image
@@ -51,7 +52,7 @@ const Projects = () => {
             <h2>Previous Projects</h2>
             <ProjectSection>
                 <Card>
-                    <FutureProjectImage />
+                    <ProjectImage />
                     <CardSection>
                         <h4>Project 1</h4>
                         <ProjectDescription>Project 1 Description</ProjectDescription>
