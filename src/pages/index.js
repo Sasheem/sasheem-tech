@@ -16,8 +16,8 @@ const IndexPage = () => (
   <PageLessLayout>
     <Profile />
     {/* <About /> */}
-    <Projects />
-    <Contact />
+    {/* <Projects /> */}
+    <Contact id="contactSection" />
   </PageLessLayout>
 )
 

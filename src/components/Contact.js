@@ -42,9 +42,8 @@ const StyledTextArea = styled.textarea`
     border: 1px solid lightgray;
     border-radius: 0.3em; 
     max-width: 30vw;
-    min-height: 15vh
-    text-indent: 2em;
-    padding: 0.3em;
+    min-height: 15vh;
+    padding: 0.5em;
 `;
 const StyledLabel = styled.label`
     margin-bottom: 0.5em;

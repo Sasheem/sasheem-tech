@@ -8,12 +8,12 @@ const ProjectLinkStyled = styled.a`
     border: 1px solid rgba(0, 0, 0, 0.4);
     padding: 0.4em;
     border-radius: 0.3em;
-    
+    cursor: pointer;
 `;
 
 const ProjectLink = (props) => {
     return (
-        <ProjectLinkStyled href={props.destination}>{props.children}</ProjectLinkStyled>
+        <ProjectLinkStyled href={props.destination} target="_blank">{props.children}</ProjectLinkStyled>
     );
 };
 

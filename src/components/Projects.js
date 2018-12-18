@@ -44,7 +44,7 @@ const ProjectSection = styled.div`
     grid-row-gap: 2em;
     padding: 3em;
     height: 80%;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
 `;
 
 const ProjectDescription = styled.p`
@@ -153,7 +153,7 @@ const Projects = () => (
                         </CardSection>
                     </Card>
                 </ProjectSection>
-                <ProjectLink href="/">More Projects</ProjectLink>
+                <ProjectLink destination="https://github.com/Sasheem?tab=repositories">More Projects</ProjectLink>
             </div>
         }
     />
