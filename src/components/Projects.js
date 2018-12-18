@@ -87,8 +87,9 @@ const Projects = () => (
                 style={{
                     margin: 'auto 0',
                     textAlign: 'center',
-                    height: '120vh',
-                    paddingTop: '1em',
+                    height: '140vh',
+                    padding: '5em 0',
+                    background: '#8DDBE0',
                 }}
             >
                 <h2>Previous Projects</h2>
