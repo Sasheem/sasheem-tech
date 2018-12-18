@@ -1,46 +1,100 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { User } from 'styled-icons/fa-solid/User';
+import { Email } from 'styled-icons/material/Email';
+import { Idea } from 'styled-icons/boxicons-solid/Idea';
+
+const UserIcon = styled(User)``;
+const EmailIcon = styled(Email)``;
+const IdeaIcon = styled(Idea);
+
+const styles = {
+    iconStyles: {
+        position: 'absolute',
+        top: '0.6em',
+        left: '0.6em',
+    },
+}
+
 const FormRow = styled.p`
     display: flex;
     justify-content: center;
-    width: 40vw;
+    align-items: flex-start;
+    width: 30vw;
     margin: 5vh auto;
-    background: red;
+    flex-direction: column;
 `;
-const FlexDiv = styled.div` flex: 1; `;
-const FlexLabel = styled.label` flex: 2; `;
-const FlexInput = styled.input` flex: 5; `;
+
+const StyledInput = styled.input` 
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    text-indent: 2em;
+    padding: 0.5em;
+`;
+const InputContainer = styled.div`
+    position: relative;
+    width: 100%;
+`;
+const StyledTextArea = styled.textarea`
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 0.3em; 
+    max-width: 30vw;
+    min-height: 15vh
+    text-indent: 2em;
+    padding: 0.3em;
+`;
+const StyledLabel = styled.label`
+    margin-bottom: 0.5em;
+`;
+const StyledButton = styled.button`
+    padding: 0.3em;
+    width: 10vw;
+    background: none;
+    border: 1px solid black;
+    border-radius: 0.3em;
+    cursor: pointer;
+`;
 const Contact = () => {
     return (
         <div
             style={{
                 margin: 'auto 0',
                 textAlign: 'center',
-                background: 'lightblue',
                 height: '100vh',
+                paddingBottom: '50em'
             }}
         >
-            <h1 style={{ paddingTop: '20vh' }}>Contact Section</h1>
+            <h2 style={{ paddingTop: '20vh' }}>Tell me about your dream app idea</h2>
+            <p>What your business does - Who your target audience is - What timeline you envision</p>
+
             {/* action="/pages/success" directs user to sucess page upon submission */}
             <form name="contact-general" method="POST" data-netlify="true">
                 <FormRow>
-                    <FlexLabel>Your Name: </FlexLabel>
-                    <FlexDiv />
-                    <FlexInput type="text" name="name" id="name" />
+                    <StyledLabel>Name</StyledLabel>
+                    <InputContainer>
+                        <UserIcon size="20" style={styles.iconStyles} />
+                        <StyledInput type="text" name="name" id="name" />
+                    </InputContainer>
                 </FormRow>
                 <FormRow>
-                    <FlexLabel>Your Email: </FlexLabel>
-                    <FlexDiv />
-                    <FlexInput type="text" name="name" id="email" />
+                    <StyledLabel>Email</StyledLabel>
+                    <InputContainer>
+                        <EmailIcon size="20" style={styles.iconStyles} />
+                        <StyledInput type="text" name="name" id="email" />
+                    </InputContainer>
+                    
                 </FormRow>
                 <FormRow>
-                    <FlexLabel>Message: </FlexLabel>
-                    <FlexDiv />
-                    <textarea style={{ flex: 5 }} name="message"></textarea>
+                    <StyledLabel>Message</StyledLabel>
+                    <InputContainer>
+                        <StyledTextArea name="message"></StyledTextArea>
+                    </InputContainer>
                 </FormRow>
-                <FormRow>
-                    <button type="submit">Send</button>
+                <FormRow style={{ alignItems: 'center' }}>
+                    <StyledButton type="submit">Send</StyledButton>
                 </FormRow>
             </form>
         </div>
