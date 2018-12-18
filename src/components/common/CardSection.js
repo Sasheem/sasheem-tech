@@ -11,6 +11,8 @@ const CardSectionStyled = styled.div`
   padding-top: 0.3em;
   border-top: 1px solid rgba(0, 0, 0, 0.4);
   background: white;
+  border-bottom-right-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
 `;
 
 const CardSection = (props) => {
