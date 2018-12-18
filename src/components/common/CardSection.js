@@ -10,6 +10,7 @@ const CardSectionStyled = styled.div`
   padding-left: 0.5em;
   padding-top: 0.3em;
   border-top: 1px solid rgba(0, 0, 0, 0.4);
+  background: white;
 `;
 
 const CardSection = (props) => {
