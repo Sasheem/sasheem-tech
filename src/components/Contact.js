@@ -7,12 +7,12 @@ import { Idea } from 'styled-icons/boxicons-solid/Idea';
 
 const UserIcon = styled(User)``;
 const EmailIcon = styled(Email)``;
-const IdeaIcon = styled(Idea);
+const IdeaIcon = styled(Idea)``;
 
 const styles = {
     iconStyles: {
         position: 'absolute',
-        top: '0.6em',
+        top: '0.7em',
         left: '0.6em',
     },
 }
