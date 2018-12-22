@@ -86,13 +86,6 @@ const Contact = () => {
                     </InputContainer>
                 </FormRow>
                 <FormRow>
-                    <StyledLabel>Project Scope</StyledLabel>
-                    <InputContainer>
-                        <IdeaIcon size="20" style={styles.iconStyles} />
-                        <StyledInput type="text" name="project" id="project" />
-                    </InputContainer>
-                </FormRow>
-                <FormRow>
                     <StyledLabel>Message</StyledLabel>
                     <InputContainer>
                         <StyledTextArea name="message"></StyledTextArea>
