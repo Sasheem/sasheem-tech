@@ -82,16 +82,16 @@ const Header = ({ siteTitle }) => (
           Projects
         </StyledLink>
       </p>
-      <p>
+      {/* <p>
         <StyledLink onClick={ () => {
           document.getElementById('contactSection').scrollIntoView()
         }}>
           Contact
         </StyledLink>
-        {/* <HeaderLink to="/">
+        <HeaderLink to="/">
           Contact
-        </HeaderLink> */}
-      </p>
+        </HeaderLink>
+      </p> */}
     </div>
   </div>
 )
