@@ -17,9 +17,8 @@ const styles = {
     },
 }
 
-const FormRow = styled.p`
+const FormRow = styled.div`
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     width: 30vw;
     margin: 5vh auto;
