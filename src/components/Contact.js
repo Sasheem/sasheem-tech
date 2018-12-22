@@ -79,6 +79,13 @@ const Contact = () => {
                     </InputContainer>
                 </FormRow>
                 <FormRow>
+                    <StyledLabel>Email Input</StyledLabel>
+                    <InputContainer>
+                        <IdeaIcon size="20" style={styles.iconStyles} />
+                        <StyledInput type="text" name="emailInput" id="emailInput" />
+                    </InputContainer>
+                </FormRow>
+                <FormRow>
                     <StyledLabel>Email</StyledLabel>
                     <InputContainer>
                         <EmailIcon size="20" style={styles.iconStyles} />
