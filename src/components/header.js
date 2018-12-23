@@ -1,10 +1,11 @@
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import React from 'react'
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { TwitterSquare } from 'styled-icons/fa-brands/TwitterSquare';
 import { Linkedin } from 'styled-icons/fa-brands/Linkedin';
 import { GithubSquare } from 'styled-icons/fa-brands/GithubSquare';
+
 import ProjectLink from './ProjectLink';
 
 const HeaderLink = styled(Link)`
@@ -30,6 +31,8 @@ const styles = {
     marginRight: '0.1em',
   },
 }
+
+
 
 const Header = ({ siteTitle }) => (
   <div
@@ -67,11 +70,11 @@ const Header = ({ siteTitle }) => (
         marginRight: '1em',
       }}
     >
-      <p>
+      {/* <p>
         <HeaderLink to="/">
           Home
         </HeaderLink>
-      </p>
+      </p> */}
       {/* <p>
         <HeaderLink to="/">
           About
@@ -82,16 +85,16 @@ const Header = ({ siteTitle }) => (
           Projects
         </StyledLink>
       </p>
-      {/* <p>
-        <StyledLink onClick={ () => {
+      <p>
+        {/* <StyledLink onClick={ () => {
           document.getElementById('contactSection').scrollIntoView()
         }}>
           Contact
-        </StyledLink>
-        <HeaderLink to="/">
+        </StyledLink> */}
+        {/* <HeaderLink to="/">
           Contact
-        </HeaderLink>
-      </p> */}
+        </HeaderLink> */}
+      </p>
     </div>
   </div>
 )
