@@ -10,38 +10,41 @@ const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+  }
+`;
+
+const LeftContainer = styled.div`
+  margin-right: 5em;
+  @media only screen and (max-width: 768px) {
+      margin-right: 0;
+      text-align: center;
+  }
+`;
+const RightContainer = styled.div`
+  margin-left: 5em;
+  width: 300px;
+  max-width: 300px;
+  @media only screen and (max-width: 768px) {
+      margin-left: 0;
+  }
 `;
 
 const Profile = () => {
     return(
         <ProfileContainer>
-            <div style={{ marginRight: '5em' }}>
+            <LeftContainer>
                 <h1>Hi I'm Sasheem</h1>
                 <p>Mobile App and Web Developer</p>
                 <p style={{ marginBottom: '3em' }}>I build things with React and React Native</p>
                 <ProjectLink destination="https://www.unhousedhumanity.org/">Currently developing for Unhoused Humanity</ProjectLink>
-                {/* <a
-                    style={{
-                        fontSize: '1em',
-                        textDecoration: 'none',
-                        color: 'rgba(0,0,0,0.4)',
-                        border: '1px solid rgba(0, 0, 0, 0.4)',
-                        padding: '0.3em',
-                        borderRadius: '0.3em'
-                    }}
-                    href="https://www.unhousedhumanity.org/"
-                >
-                    Currently developing for Unhoused Humanity
-                </a> */}
-            </div>
-            <div
-                style={{
-                    maxWidth: '300px',
-                    width: '300px',
-                    marginLeft: '5em'
-                }}>
+            </LeftContainer>
+            <RightContainer>
                 <Image />
-            </div>
+            </RightContainer>
         </ProfileContainer>
     );
 };

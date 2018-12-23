@@ -23,6 +23,9 @@ const FormRow = styled.div`
     width: 30vw;
     margin: 5vh auto;
     flex-direction: column;
+    @media only screen and (max-width: 768px) {
+        width: 50vw;
+    }
 `;
 
 const StyledInput = styled.input` 
@@ -40,7 +43,6 @@ const StyledTextArea = styled.textarea`
     width: 100%;
     border: 1px solid lightgray;
     border-radius: 0.3em; 
-    max-width: 30vw;
     min-height: 15vh;
     padding: 0.5em;
 `;
