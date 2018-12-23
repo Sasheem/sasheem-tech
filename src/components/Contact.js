@@ -69,7 +69,8 @@ const Contact = () => {
             <p>What your business does - Who your target audience is - What timeline you envision</p>
 
             {/* action="/pages/success" directs user to sucess page upon submission */}
-            <form name="contact-general" method="POST" data-netlify="true">
+            <form name="contact-general" method="post" action="#" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="bot-field" value="contact-general" />
                 <FormRow>
                     <StyledLabel>Name</StyledLabel>
                     <InputContainer>
