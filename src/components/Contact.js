@@ -17,6 +17,17 @@ const styles = {
     },
 }
 
+const ContactContainer = styled.div`
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+    padding-bottom: 50em;
+
+    @media only screen and (min-width: 375px) {
+        padding-bottom: 53em;
+    }
+`;
+
 // when screen > 925px, display as a row
 const FormDesc = styled.div`
     padding: 0 20%;
@@ -83,13 +94,13 @@ const StyledButton = styled.button`
 `;
 const Contact = () => {
     return (
-        <div
-            style={{
-                margin: 'auto 0',
-                textAlign: 'center',
-                height: '100vh',
-                paddingBottom: '50em'
-            }}
+        <ContactContainer
+            // style={{
+            //     margin: 'auto 0',
+            //     textAlign: 'center',
+            //     height: '100vh',
+            //     paddingBottom: '50em'
+            // }}
         >
             <h2 style={{ paddingTop: '20vh' }}>Tell me about your dream app idea</h2>
             <FormDesc>
@@ -126,7 +137,7 @@ const Contact = () => {
                     <StyledButton type="submit">Send</StyledButton>
                 </FormRow>
             </form>
-        </div>
+        </ContactContainer>
     );
 };
 
