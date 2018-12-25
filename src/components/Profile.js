@@ -4,31 +4,33 @@ import styled from 'styled-components';
 import Image from './image';
 import ProjectLink from './ProjectLink';
 
+// when screen < 925px
 const ProfileContainer = styled.div`
-  height: 87vh;
+  height: 40em;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 925px) {
       flex-direction: column-reverse;
       justify-content: space-evenly;
   }
 `;
-
+// when screen < 925px
 const LeftContainer = styled.div`
   margin-right: 5em;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 925px) {
       margin-right: 0;
       text-align: center;
   }
 `;
+// when screen < 925px
 const RightContainer = styled.div`
   margin-left: 5em;
   width: 300px;
   max-width: 300px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 925px) {
       margin-left: 0;
   }
 `;

@@ -17,14 +17,34 @@ const styles = {
     },
 }
 
+// when screen > 925px, display as a row
+const FormDesc = styled.div`
+    padding: 0 20%;
+
+    @media only screen and (min-width: 925px) {
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: space-between;
+        width: 50%;
+    }
+`;
+
 const FormRow = styled.div`
     display: flex;
     align-items: flex-start;
-    width: 30vw;
+    width: 30%;
     margin: 5vh auto;
     flex-direction: column;
-    @media only screen and (max-width: 768px) {
-        width: 50vw;
+    @media only screen and (max-width: 925px) {
+        width: 45%;
+    }
+`;
+
+// be hidden when screen < 925px
+const HiddenP = styled.p`
+    @media only screen and (max-width: 925px) {
+        display: none;
     }
 `;
 
@@ -51,7 +71,8 @@ const StyledLabel = styled.label`
 `;
 const StyledButton = styled.button`
     padding: 0.3em;
-    width: 10vw;
+    width: 20%;
+    min-width: 5em;
     background: none;
     border: 1px solid black;
     border-radius: 0.3em;
@@ -68,8 +89,13 @@ const Contact = () => {
             }}
         >
             <h2 style={{ paddingTop: '20vh' }}>Tell me about your dream app idea</h2>
-            <p>What your business does - Who your target audience is - What timeline you envision</p>
-
+            <FormDesc>
+                <p>What your business does</p>
+                <HiddenP>-</HiddenP>
+                <p id="mid-desc">Who your target audience is </p>
+                <HiddenP>-</HiddenP>
+                <p>What timeline you envision</p>
+            </FormDesc>
             {/* action="/pages/success" directs user to sucess page upon submission */}
             <form name="contact-general" method="post" action="#" data-netlify="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="bot-field" value="contact-general" />
