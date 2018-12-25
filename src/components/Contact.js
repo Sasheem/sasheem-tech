@@ -39,6 +39,9 @@ const FormRow = styled.div`
     @media only screen and (max-width: 925px) {
         width: 45%;
     }
+    @media only screen and (max-width: 375px) {
+        width: 80%;
+    }
 `;
 
 // be hidden when screen < 925px
