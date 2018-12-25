@@ -15,6 +15,7 @@ const ProfileContainer = styled.div`
   @media only screen and (max-width: 925px) {
       flex-direction: column-reverse;
       justify-content: space-evenly;
+      height: 35em;
   }
 `;
 // when screen < 925px
