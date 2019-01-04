@@ -6,6 +6,11 @@ const CardStyled = styled.div`
   border-radius: 0.3em;
   display: flex;
   flex-direction: column;
+  background: white;
+
+  @media only screen and (max-width) {
+    background: yellow;
+  }
 `;
 
 const Card = (props) => {
