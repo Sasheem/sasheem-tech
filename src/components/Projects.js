@@ -117,7 +117,8 @@ const CardBottom = styled.div`
     color: grey;
     p {
         position: relative;
-        bottom: 0.5em;
+        bottom: 2em;
+        font-size: 14px;
     }
 `;
 
