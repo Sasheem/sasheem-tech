@@ -1,6 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Sasheem Personal Website'
+    title: `Sasheem's Website`,
+    author: `Sasheem Snell`,
+    description: `His personal website showcasing his previous projects and blog`,
+    siteUrl: `https://sasheem.tech/`,
+    social: {
+      twitter: `sasheemdev`,
+      instagram: `sasheem_`,
+      github: `Sasheem`,
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
