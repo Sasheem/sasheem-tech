@@ -1,29 +1,29 @@
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { TwitterSquare } from 'styled-icons/fa-brands/TwitterSquare';
-import { Linkedin } from 'styled-icons/fa-brands/Linkedin';
-import { GithubSquare } from 'styled-icons/fa-brands/GithubSquare';
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { TwitterSquare } from 'styled-icons/fa-brands/TwitterSquare'
+import { Linkedin } from 'styled-icons/fa-brands/Linkedin'
+import { GithubSquare } from 'styled-icons/fa-brands/GithubSquare'
 
-import ProjectLink from './ProjectLink';
+import ProjectLink from './ProjectLink'
 
 const HeaderLink = styled(Link)`
   color: black;
   text-decoration: none;
   font-size: 1em;
   margin-right: 4em;
-`;
+`
 const StyledLink = styled.a`
   color: black;
   text-decoration: none;
   font-size: 1em;
   margin-right: 4em;
-`;
+`
 
-const TwitterLink = styled(TwitterSquare)``;
-const LinkedinLink = styled(Linkedin)``;
-const GithubLink = styled(GithubSquare)``;
+const TwitterLink = styled(TwitterSquare)``
+const LinkedinLink = styled(Linkedin)``
+const GithubLink = styled(GithubSquare)``
 
 const styles = {
   socialStyles: {
@@ -32,8 +32,6 @@ const styles = {
   },
 }
 
-
-
 const Header = ({ siteTitle }) => (
   <div
     style={{
@@ -41,29 +39,39 @@ const Header = ({ siteTitle }) => (
       display: 'flex',
     }}
   >
-    <div 
-      id="leftMenu" 
-      style={{  
-        display: 'flex', 
+    <div
+      id="leftMenu"
+      style={{
+        display: 'flex',
         paddingTop: '0.9em',
         flex: '2',
-        marginLeft: '1em', 
-      }}>
+        marginLeft: '1em',
+        textDecoration: 'none',
+      }}
+    >
       <a class="item" href="https://www.github.com/Sasheem">
         <GithubLink title="Github Link" size="40" style={styles.socialStyles} />
       </a>
       <a class="item" href="https://www.linkedin.com/in/sasheem/">
-        <LinkedinLink title="Linkedin Link" size="40" style={styles.socialStyles} />
+        <LinkedinLink
+          title="Linkedin Link"
+          size="40"
+          style={styles.socialStyles}
+        />
       </a>
       <a class="item" href="https://twitter.com/sasheemdev">
-        <TwitterLink title="Twitter Link" size="40" style={styles.socialStyles} />
+        <TwitterLink
+          title="Twitter Link"
+          size="40"
+          style={styles.socialStyles}
+        />
       </a>
     </div>
-    
-    <div 
-      id="rightMenu" 
-      style={{ 
-        display: 'flex', 
+
+    <div
+      id="rightMenu"
+      style={{
+        display: 'flex',
         paddingTop: '1.2em',
         flex: '2',
         justifyContent: 'flex-end',
@@ -75,11 +83,9 @@ const Header = ({ siteTitle }) => (
           Home
         </HeaderLink>
       </p> */}
-      {/* <p>
-        <HeaderLink to="/">
-          About
-        </HeaderLink>
-      </p> */}
+      <p>
+        <HeaderLink to="/">About</HeaderLink>
+      </p>
       <p>
         <StyledLink href="https://github.com/Sasheem?tab=repositories">
           Projects
@@ -107,4 +113,4 @@ Header.defaultProps = {
   siteTitle: '',
 }
 
-export default Header;
+export default Header
