@@ -83,9 +83,9 @@ const Header = ({ siteTitle }) => (
           Home
         </HeaderLink>
       </p> */}
-      <p>
+      {/* <p>
         <HeaderLink to="/">About</HeaderLink>
-      </p>
+      </p> */}
       <p>
         <StyledLink href="https://github.com/Sasheem?tab=repositories">
           Projects
