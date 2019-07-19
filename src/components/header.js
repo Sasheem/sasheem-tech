@@ -29,6 +29,7 @@ const styles = {
   socialStyles: {
     color: 'black',
     marginRight: '0.1em',
+    textDecoration: 'none',
   },
 }
 
@@ -46,7 +47,6 @@ const Header = ({ siteTitle }) => (
         paddingTop: '0.9em',
         flex: '2',
         marginLeft: '1em',
-        textDecoration: 'none',
       }}
     >
       <a class="item" href="https://www.github.com/Sasheem">
